@@ -1,0 +1,10 @@
+
+<h2>Record Sale - {{ product.name }}</h2>
+
+<form method="post" action="{% url 'record_sale' product.id %}">
+  {% csrf_token %}
+  
+  {{ form.as_p }}
+  
+  <button type="submit">Record Sale</button>
+</form>
